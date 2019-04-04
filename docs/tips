@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "SERVER: ssh teamN@hack.d.umn.edu"
+echo "PUT ATTACKS IN: ~/attacks/ (one line per file)"
+echo "TO SUBMIT YOUR CODE: run 'submit' your source dir"
+echo "SCOREBOARD: run 'score'"
+echo "ATTACKLIST: /var/cctf/attacklist"
+echo "YOUR PASS/FAILS: /var/cctf/dirs/teamN/score.txt"
