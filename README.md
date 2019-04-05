@@ -4,6 +4,10 @@ A pack is a directory containing all the needed information to run a certain com
 
 To run a pack, the root directory of the pack should be placed (or symlinked) into the root directory of the dtanm repo (in a directory named `pack`) before you run `./setup.sh`.
 
+To create a new pack, modify this repository with the new pack programs and data.
+
+To change this repo into your new pack repo, remove the `.git` directory in this repository, create a new private repo in github (don't want the program to leak!), and follow the instructions to push your new repository up.
+
 Inside the `pack/` folder should be the following directory structure:
 
 - `docs/`
@@ -24,3 +28,7 @@ Inside the `pack/` folder should be the following directory structure:
 	- `pack_name` - This should contain the name of the pack. Can be anything. Currently I don't think it is used for anything.
 	- `src_name` - This should be the name of the source file. (NOTE: this should be removed in the next version.)
 - `src/` -- This directory should contain whatever code you would like all players to receive.
+
+## Questions?
+
+Talk to us in #dtanm-dev on https://umdlars.slack.com/ or look at an existing pack, such as: https://github.umn.edu/UMDLARS/cctf_calc
