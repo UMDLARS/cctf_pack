@@ -26,9 +26,6 @@ Inside the `pack/` folder should be the following directory structure:
 	- `pack_name` - This should contain the name of the pack. Can be anything. Currently I don't think it is used for anything.
 	- `src_name` - This should be the name of the source file. (NOTE: this should be removed in the next version.)
 - `src/` -- This directory should contain whatever code you would like all players to receive.
-	- This directory should be a git repository. (possibly empty) (i.e. run
-	  `git init`; we can't do that because this repository is also version
-	  controlled.)
 
 ## Questions?
 
