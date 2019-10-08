@@ -1,15 +1,24 @@
-# Making a New Pack
+# DTANM Pack Template
 
-A pack is a directory containing all the needed information to run a certain competition.
+A pack is a directory containing all the information needed to run a
+[DTANM](https://github.com/UMDLARS/dtanm) competition.
 
-To run a pack, the root directory of the pack should be placed (or symlinked) into the root directory of the dtanm repo (in a directory named `pack`) before you run `./setup.sh`.
+To run a pack, the root directory of the pack should be placed (or symlinked)
+into the root directory of the DTANM repo (in a directory named `pack`) before
+you start the competition. (More directions on this are available in [the DTANM
+repository](https://github.com/UMDLARS/dtanm).)
 
-To create a new pack, modify this repository with the new pack programs and data.
 
-To change this repo into your new pack repo, remove the `.git` directory in this repository, create a new private repo in github (don't want the program to leak!), and follow the instructions to push your new repository up.
+### Creating a new pack
+To create a new pack, modify this repository with the new pack programs and
+data. We recommend going to this repository's GitHub page and clicking the
+green "Use this template" button at the top, which will create a new repository
+with all the files from this repo included. Then you can add and remove files
+as appropriate. Remember to keep your repositories private---we don't want the
+files for `gold` to be public!
 
+### Pack directory structure
 Inside the `pack/` folder should be the following directory structure:
-
 - `docs/`
 	- `index.[html|md|txt]` - This is your base help file. See the existing
 	  `index.md` for an example, or `instructions.md` for specific instructions
@@ -21,12 +30,12 @@ Inside the `pack/` folder should be the following directory structure:
 - `gold/` -- This directory should contain the source tree of the gold program (a "perfect" version of the program.) 
 	- gold must include a `Makefile` for installation that builds a program called `gold`
 	- Recommended: gold programs should include a test script with a test case for all known bugs in the "broken" version
-- `info/` -- metadata for the pack (We should change this to be a single file named `config.json`.)
-	- `bin_name` - This should contain the name of the binary/script which is submitted.
-	- `pack_name` - This should contain the name of the pack. Can be anything. Currently I don't think it is used for anything.
-	- `src_name` - This should be the name of the source file. (NOTE: this should be removed in the next version.)
 - `src/` -- This directory should contain whatever code you would like all players to receive.
+- `config.py` -- This file contains configuration values that will be passed
+          to the framework.
+- `Dockerfile.build` -- This file will be used to build the submitted programs.
+          Check out the sample for more instructions.
 
-## Questions?
-
-Talk to us in #dtanm-dev on https://umdlars.slack.com/ or look at an existing pack, such as: https://github.umn.edu/UMDLARS/cctf_calc
+### Questions?
+Talk to us in #dtanm-dev on https://umdlars.slack.com/ or look at an existing
+pack, such as [`calc`](https://github.com/UMDLARS/dtanm_pack_calc).
