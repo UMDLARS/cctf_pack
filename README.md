@@ -31,6 +31,8 @@ Inside the `pack/` folder should be the following directory structure:
 	- gold must include a `Makefile` for installation that builds a program called `gold`
 	- Recommended: gold programs should include a test script with a test case for all known bugs in the "broken" version
 - `src/` -- This directory should contain whatever code you would like all players to receive.
+        - This should include a `.gitignore` file containing all files you expect to be built; if the user commits
+	  these, it will cause problems when they are pushed.
 - `config.py` -- This file contains configuration values that will be passed
           to the framework.
 - `Dockerfile.build` -- This file will be used to build the submitted programs.
