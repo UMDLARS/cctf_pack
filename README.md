@@ -19,6 +19,17 @@ files for `gold` to be public!
 
 ### Pack directory structure
 Inside the `pack/` folder should be the following directory structure:
+- `attacks/`
+	- This directory should contain attacks to be preloaded (in the
+	  [documented tarball form](https://github.com/UMDLARS/dtanm/wiki/Attacks),
+	  which is how files are provided when submitted to DTANM and downloaded.
+	- When DTANM is started for the first time, the attacks will be registered.
+	- Attacks will not belong to any user, and cannot be duplicated by other
+	  users. These attacks can pass or can fail with the default provided code.
+	- If a mapping file attacks.tsv exists, then attack names will be provided
+	  from those files. Otherwise, the filename will provide the name of the
+	  attack (for example, `Divide by zero.tar.gz` will result in an attack
+	  named `Divide by zero`.
 - `docs/`
 	- `index.[html|md|txt]` - This is your base help file. See the existing
 	  `index.md` for an example, or `instructions.md` for specific instructions
