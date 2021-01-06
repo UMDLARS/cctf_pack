@@ -51,4 +51,4 @@ Inside the `pack/` folder should be the following directory structure:
 
 ### Questions?
 Talk to us in #dtanm-dev on https://umdlars.slack.com/ or look at an existing
-pack, such as [`calc`](https://github.com/UMDLARS/dtanm_pack_calc).
+pack, such as [`echo`](https://github.com/UMDLARS/dtanm_pack_echo).
